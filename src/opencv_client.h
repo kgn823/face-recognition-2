@@ -1,23 +1,36 @@
-#include "opencv2/core.hpp"
-#include "opencv/objdetect.hpp"
-#include "opencv/imgproc.hpp"
+#ifndef OPENCV_CLIENT_H
+#define OPENCV_CLIENT_H
 
-// OpenCv also includes high-level gui
+#include <opencv2/opencv.hpp>
+#include "image.h"
+
+// OpenCv also includes high-level gui  
 // #include "opencv/highgui.hpp"
-
-
 
 class OpenCV_Client { 
     public: 
     OpenCV_Client();
     ~OpenCV_Client();
 
-    bool OpenCvImportFile();
+    Image OpenCvImportFile(std::string filePath,int flag);
     bool OpenCvDeportFile();
 
     bool OpenCvProcessFace();
+
+    void setMemberVariable(int number);
+    int getMemberVariable();
     
     private: 
-    
 
-}
+    // int memberVariable; 
+
+    // OpenCV_Client test = OpenCV_Client();
+    // test.memberVariable = 12; //Illegal, because memberVariable is private
+
+    // int numberFromOpenCV = test.memberVariable;
+
+    // test.setMemberVariable(12);  // Legal, because setMemberVariable is public
+
+};
+
+#endif
