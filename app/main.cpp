@@ -48,8 +48,10 @@ int main(int argc, char** argv)
     }
     //==============================
 
+    
     namedWindow("Display Image", WINDOW_AUTOSIZE);
     imshow("Display Image", imageVariable.m_ImageGetter());
+    client.OpenCvExportFile("Andre.png",imageVariable);
     waitKey(0);
     return 0;
 }

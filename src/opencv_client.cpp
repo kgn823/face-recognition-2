@@ -29,6 +29,15 @@ Image OpenCV_Client::OpenCvImportFile(std::string filePath ,int flag){
     return importedImage;
 } 
 
+bool OpenCV_Client::OpenCvExportFile(std::string filePath, Image imageObject){
+    // Export file 
+    // Export file that was imported by OpenCvImportFile which is a Image
+    if(cv::imwrite(filePath, imageObject.m_ImageGetter())) {
+        std::cout << "Saved file to " << filePath << std::endl;
+        return true;
+    }
+    return false; 
+}
 // int OpenCV_Client::getMemberVariable() { return memberVariable; }
 
 // void OpenCV_Client::setMemberVariable(int number) { memberVariable = number; }

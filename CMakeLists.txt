@@ -14,7 +14,7 @@ link_directories(${CMAKE_SOURCE_DIR}/dependencies/lib)
 
 set(FACE_REC_LIBS tensorflow)
 
-#add_executable(FaceRec app/main.cpp)
+add_executable(FaceRec app/main.cpp)
 
 target_link_libraries(FaceRec PRIVATE ${OpenCV_LIBS} ${FACE_REC_LIBS} src)
 

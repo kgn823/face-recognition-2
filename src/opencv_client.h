@@ -13,7 +13,7 @@ class OpenCV_Client {
     ~OpenCV_Client();
 
     Image OpenCvImportFile(std::string filePath,int flag);
-    bool OpenCvDeportFile();
+    bool OpenCvExportFile(std::string filePath, Image imageObject);
 
     bool OpenCvProcessFace();
 
