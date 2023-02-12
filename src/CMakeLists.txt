@@ -1,10 +1,11 @@
-project(FaceRec_Source)
+cmake_minimum_required(VERSION 3.11)
 
-set(FaceRecSrc
-    opencv_client.cpp
-    image.cpp)
+project(src)
 
-add_library(FaceRec_Source STATIC ${FaceRecSrc})
+set(SRC
+    image.cpp
+    opencv_client.cpp)
 
-target_include_directories(FaceRec_Source PUBLIC ../dependencies/include)
+add_library(src STATIC ${SRC})
 
+target_include_directories(src PUBLIC ${CMAKE_SOURCE_DIR}/dependencies/include)

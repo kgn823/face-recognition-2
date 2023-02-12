@@ -1,10 +1,8 @@
+cmake_minimum_required(VERSION 3.11)
+
 project(FaceRec_App)
 
-set(FaceRecSrc
-    main.cpp)
+add_executable(FaceRec_App main.cpp)
 
-add_library(FaceRec_App STATIC ${FaceRecSrc})
-
-include_directories(${CMAKE_SOURCE_DIR}/src)
-target_include_directories(FaceRec_App PUBLIC ../dependencies/include)
+target_link_libraries(FaceRec_App PRIVATE ${OpenCV_LIBS} ${FACE_REC_LIBS} src)
 

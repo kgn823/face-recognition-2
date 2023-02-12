@@ -2,6 +2,7 @@
 #include <tensorflow/c/c_api.h>
 #include <stdio.h>
 #include "opencv_client.h"
+#include "../src/image.h"
 
 using namespace cv;
 int main(int argc, char** argv)
