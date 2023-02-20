@@ -32,6 +32,10 @@ Image OpenCV_Client::OpenCvImportFile(std::string filePath ,int flag){
 bool OpenCV_Client::OpenCvExportFile(std::string filePath, Image imageObject){
     // Export file 
     // Export file that was imported by OpenCvImportFile which is a Image
+    if(imageObject.m_ImageGetter().empty()) {
+        std::cout << "image has no data" << std::endl;
+        return false;
+    }
     if(cv::imwrite(filePath, imageObject.m_ImageGetter())) {
         std::cout << "Saved file to " << filePath << std::endl;
         return true;

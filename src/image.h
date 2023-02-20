@@ -5,6 +5,7 @@
 
 
 class Image {
+    
     public:
         void m_ImageSetter(cv::Mat mat); // this is to SET m_Image
         

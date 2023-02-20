@@ -4,7 +4,8 @@ project(src)
 
 set(SRC
     image.cpp
-    opencv_client.cpp)
+    opencv_client.cpp
+    opencv_video.cpp)
 
 add_library(src STATIC ${SRC})
 

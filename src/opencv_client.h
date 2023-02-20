@@ -15,8 +15,6 @@ class OpenCV_Client {
     Image OpenCvImportFile(std::string filePath,int flag);
     bool OpenCvExportFile(std::string filePath, Image imageObject);
 
-    bool OpenCvProcessFace();
-
     void setMemberVariable(int number);
     int getMemberVariable();
     
