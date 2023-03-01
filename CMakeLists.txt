@@ -12,10 +12,10 @@ include_directories(${CMAKE_SOURCE_DIR}/src)
 
 link_directories(${CMAKE_SOURCE_DIR}/dependencies/lib)
 
-set(FACE_REC_LIBS tensorflow)
+find_package(frugally-deep CONFIG REQUIRED)
 
 add_executable(FaceRec app/main.cpp)
 
-target_link_libraries(FaceRec PRIVATE ${OpenCV_LIBS} ${FACE_REC_LIBS} opencv_core opencv_videoio opencv_highgui src)
+target_link_libraries(FaceRec PRIVATE ${OpenCV_LIBS} opencv_core opencv_videoio opencv_highgui opencv_objdetect opencv_imgproc opencv_imgcodecs ${frugally-deep_LIBS} frugally-deep::fdeep src)
 
 add_subdirectory(app)

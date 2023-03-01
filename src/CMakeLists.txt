@@ -5,7 +5,8 @@ project(src)
 set(SRC
     image.cpp
     opencv_client.cpp
-    opencv_video.cpp)
+    opencv_video.cpp
+    keras.cpp)
 
 add_library(src STATIC ${SRC})
 

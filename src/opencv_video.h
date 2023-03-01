@@ -4,6 +4,8 @@
 #include <opencv2/opencv.hpp> 
 #include <opencv2/videoio.hpp>
 
+
+
 #include "image.h"
 
 // video capture and object detection 
@@ -16,6 +18,8 @@ class OpenCV_Video {
         cv::VideoCapture mCapture;
         bool cameraState = false;
 };
+
+
 
 
 /*

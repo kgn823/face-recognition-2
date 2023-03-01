@@ -8,8 +8,15 @@ OpenCV_Video::~OpenCV_Video() { std::cout << "Destroyed OpenCV Client" << std::e
 
 OpenCV_Video::OpenCV_Video() : mCapture(0) {} // initializer list
 
+
+ 
+
+
 bool OpenCV_Video::CameraOn(Image &image){
+    
+    
     cv::Mat myImage;
+   
     if(!(mCapture.isOpened())) {
         std::cout << "Can't open camera" << std::endl;
         return false;
@@ -18,6 +25,7 @@ bool OpenCV_Video::CameraOn(Image &image){
     while(cameraState == true){
         mCapture >> myImage;
         if(!(myImage.empty())) {
+            
             image.m_ImageSetter(myImage);
             if(image.m_ImageGetter().empty()){
                 std::cout << "Can't save to Image" << std::endl;
