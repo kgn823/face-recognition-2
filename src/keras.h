@@ -1,13 +1,16 @@
 #ifndef KERAS_H
 #define KERAS_H
 
+#include <opencv2/imgcodecs.hpp>
+
 #include "image.h"
+
 
 class Keras{
     public:
     // Keras();
     // ~Keras();
-    size_t Predict_Image(std::string filePath,Image image);
+    bool Predict_Image(std::string filePath,Image image);
 };
 
-#endif
+#endif 
